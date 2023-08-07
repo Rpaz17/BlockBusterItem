@@ -21,27 +21,22 @@ public class BlockBuster {
              if (busca.codigo == codigo) {
                 return true;
             }if (tipo.equals("GAME") && busca instanceof VideoGameItem) {
+                VideoGameItem vg=(VideoGameItem) busca;
+                if (vg.codigo==codigo)
                 return true;
-            }else if(busca instanceof MovieItem)
+            }else if(tipo.equals("MOVIE")&& busca instanceof MovieItem){
+                MovieItem mi=(MovieItem) busca;
+                if (mi.codigo==codigo)
+                return true;
         }
     }
-   
-            
-            if (tipo.equals("IPHONE") && plan instanceof PlanIPhone) {
-                PlanIPhone planIPhone = (PlanIPhone) plan;
-                if (planIPhone.getEmail().equals(datoExtra)) {
-                    return true;
-                }
-            } else if (tipo.equals("SAMSUNG") && plan instanceof PlanSamsung) {
-                PlanSamsung planSamsung = (PlanSamsung) plan;
-                if (planSamsung.getPin().equals(datoExtra)) {
-                    return true;
-                }
-            }
-        }
-        return false;
+    return false;
+
+ 
  
 }
+}
+
 /*
 
 2.	Función buscarItem(int codigo, String tipo) busca en el arreglo un ítem con un código 
