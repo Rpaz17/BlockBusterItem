@@ -18,8 +18,29 @@ public class BlockBuster {
             return false;
         }   
         for(BlockBusterItem busca: guardar){
-            
+             if (busca.codigo == codigo) {
+                return true;
+            }if (tipo.equals("GAME") && busca instanceof VideoGameItem) {
+                return true;
+            }else if(busca instanceof MovieItem)
         }
+    }
+   
+            
+            if (tipo.equals("IPHONE") && plan instanceof PlanIPhone) {
+                PlanIPhone planIPhone = (PlanIPhone) plan;
+                if (planIPhone.getEmail().equals(datoExtra)) {
+                    return true;
+                }
+            } else if (tipo.equals("SAMSUNG") && plan instanceof PlanSamsung) {
+                PlanSamsung planSamsung = (PlanSamsung) plan;
+                if (planSamsung.getPin().equals(datoExtra)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+ 
 }
 /*
 
