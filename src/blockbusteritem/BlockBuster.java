@@ -14,9 +14,7 @@ public class BlockBuster {
     }
     
     public boolean buscarItem(int codigo, String tipo){
-        if(guardar.isEmpty()){
-            return false;
-        }   
+         
         for(BlockBusterItem busca: guardar){
              if (busca.codigo == codigo) {
                 return true;
@@ -31,20 +29,18 @@ public class BlockBuster {
         }
     }
     return false;
-
- 
- 
 }
+      public String Rentar(int codigo, String tipoItem, int dias){
+        if(buscarItem(codigo, tipoItem) == false){
+            return "Item No Existe";
+        }else{
+            return "Codigo: "+codigo+
+                    "Tipo de Item: "+tipoItem+
+                    "Dias: "+dias;
+        }
+    }
 }
-
 /*
-
-2.	Función buscarItem(int codigo, String tipo) busca en el arreglo un ítem con un código 
-y un tipo dado “MOVIE” o “GAME” dado. Si lo encuentra se retorna dicho objeto, si no, se retorna nulo.
-Se manda el tipo porque se permite una movie con código 1 al igual que un game con código 1.
-3.	Función agregarItem(int codigo, String nombre, String tipoItem).
-Se agrega un nuevo ítem a la colección según el tipoItem que puede ser “MOVIE” o “GAME” 
-solo si no existe ya un ítem con ese código y ese tipo. Cualquier otro dato extra se ingresa del teclado.
 4.	Rentar(int codigo, String tipoItem, int dias). 
 Si este ítem existe, se imprime todos los valores del objeto y se imprime su monto a pagar. 
 Si no existe se imprime “Item No Existe”.
