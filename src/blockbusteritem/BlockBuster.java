@@ -13,8 +13,8 @@ public class BlockBuster {
         guardar=new ArrayList();
     }
     
-    public boolean buscarItem(int codigo, String tipo)
-        if(guardar.isEmpty){
+    public void buscarItem(int codigo, String tipo){
+        if(guardar.isEmpty()){
             return null;
         }   
         for(BlockBusterItem busca: guardar){

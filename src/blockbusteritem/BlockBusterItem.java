@@ -4,10 +4,10 @@ package blockbusteritem;
 import java.util.Calendar;
 
 public abstract class BlockBusterItem {
-    private int codigo;
-    private String nombre;
-    private double precioRenta;
-    private Calendar fecha;
+    protected int codigo;
+    protected String nombre;
+    protected double precioRenta;
+    protected Calendar fecha;
 
     public BlockBusterItem(int codigo, String nombre, double precioRenta) {
         this.codigo = codigo;
