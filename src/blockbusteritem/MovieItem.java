@@ -31,8 +31,11 @@ public class MovieItem extends BlockBusterItem {
     }
     
     public Calendar evaluarEstado(){
-//        Calendar fechaActual = Calendar.getInstance();
-//        if(fechaActual>)
+        Calendar fechaActual = Calendar.getInstance();
+        int mesActual = fechaActual.get(Calendar.MONTH);
+        if(mesActual>super.mes){
+            estado="NORMAL";
+        }
         return null;
 
     }

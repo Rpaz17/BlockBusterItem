@@ -8,13 +8,13 @@ public abstract class BlockBusterItem {
     protected String nombre;
     protected double precioRenta;
     protected Calendar fecha;
-
+        int mes = fecha.get(Calendar.MONTH);
     public BlockBusterItem(int codigo, String nombre, double precioRenta) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precioRenta = precioRenta;
         this.fecha = Calendar.getInstance();
-    }
+      }
 
     public String toString() {
         return "BlockBusterItem{" + "Codigo: " + codigo +
