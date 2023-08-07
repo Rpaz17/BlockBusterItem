@@ -13,12 +13,12 @@ public class BlockBuster {
         guardar=new ArrayList();
     }
     
-    public void buscarItem(int codigo, String tipo){
+    public boolean buscarItem(int codigo, String tipo){
         if(guardar.isEmpty()){
-            return null;
+            return false;
         }   
         for(BlockBusterItem busca: guardar){
-        
+            
         }
 }
 /*

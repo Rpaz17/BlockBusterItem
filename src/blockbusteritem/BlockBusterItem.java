@@ -17,9 +17,9 @@ public abstract class BlockBusterItem {
       }
 
     public String toString() {
-        return "BlockBusterItem{" + "Codigo: " + codigo +
+        return "BlockBusterItem\nCodigo: " + codigo +
                 ", Nombre: " + nombre + 
-                ", Precio de renta del Item: " + precioRenta + "}";
+                ", Precio de renta del Item: " + precioRenta ;
     }
     
     public abstract double pagoRenta(int dias);

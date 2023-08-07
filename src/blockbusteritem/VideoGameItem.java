@@ -7,26 +7,28 @@ package blockbusteritem;
 
 public class VideoGameItem extends BlockBusterItem{
     private String tipoConsola;
+    private final static String tipe1="PLAYSTATION";
+    private final static String tipe2="XBOX";
+    private final static String tipe3="WII";
+
 
     public VideoGameItem(int codigo, String nombre,double precioRenta,String tipoConsola) {
         super(codigo,nombre,precioRenta);
-        this.tipoConsola = tipoConsola;
+        this.tipoConsola = tipoConsola.toUpperCase();
         precioRenta=30;
     }
-
+    @Override
+    public String toString() {
+        return ", Tipo Consola: GAME";
+    }
     @Override
     public double pagoRenta(int dias) {
-        return 0.0;
+        return precioRenta*dias;
     }
-    
-    
+    public String tipoValido(String tipoConsola){
+        if (tipoConsola.equals(tipe1)||tipoConsola.equals(tipe2)||tipoConsola.equals(tipe3))
+            return tipoConsola;
+        return null;
+    }
+        
 }
-/*
-Además, tiene un atributo extra de tipo String para guardar el nombre de la consola. 
-Tiene las siguientes funciones:
-1.	Se tiene 3 atributos estáticos finales de tipo String que guarda cada uno los nombres de las consolas válidas: 
-PLAYSTATION, XBOX y WII.
-2.	Redefine toString para adicionarle a lo que ya retorna el padre la consola más la palabra “Game”.
-3.	Redefine pagoRenta(int días) que retorna el precio de renta por cada día que se recibe.
-
-*/
