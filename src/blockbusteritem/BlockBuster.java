@@ -13,10 +13,16 @@ public class BlockBuster {
         guardar=new ArrayList();
     }
     
+    public boolean buscarItem(int codigo, String tipo)
+        if(guardar.isEmpty){
+            return null;
+        }   
+        for(BlockBusterItem busca: guardar){
+        
+        }
 }
 /*
-Crear una clase llamada BlockBuster.
-1.	Tiene un atributo ARRAYLIST para guardar objetos MovieItem o VideoGameItem. En el constructor se inicializa.
+
 2.	Función buscarItem(int codigo, String tipo) busca en el arreglo un ítem con un código 
 y un tipo dado “MOVIE” o “GAME” dado. Si lo encuentra se retorna dicho objeto, si no, se retorna nulo.
 Se manda el tipo porque se permite una movie con código 1 al igual que un game con código 1.
